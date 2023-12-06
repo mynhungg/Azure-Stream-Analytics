@@ -60,8 +60,7 @@ try {
   Write-Host -ForegroundColor Green " Done"
 
   Write-Host -NoNewline "(2/5) Creating Event Hub $eventHubName..."
-  New-AzEventHubNamespace -ResourceGroupName $resourceGroupName -Location $region -Name $eventHubName -SkuName Basic -WarningAction Ignore -ErrorAction Stop | Out-Null
-  -CleanupPolicy Delete
+New-AzEventHub -ResourceGroupName $resourceGroupName -NamespaceName $eventHubName -Name click-stream-events -Retention 1 -PartitionCount 1 -CleanupPolicy Delete -WarningAction Ignore -ErrorAction Stop | Out-Null
   Write-Host -ForegroundColor Green " Done"
 
   Write-Host -NoNewline "(3/5) Creating Storage Account $storageAccountName..."
