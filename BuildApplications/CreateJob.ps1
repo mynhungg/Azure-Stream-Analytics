@@ -100,7 +100,7 @@ try {
   Write-Host -ForegroundColor Green " Done"
   Write-Host -ForegroundColor Green "All resources were deployed successfully. Opening Azure portal in browser."
 
-  Start-Process "https://portal.azure.com/#@tenant/resource/subscriptions/$subscriptionId/resourceGroups/$resourceGroupName/overview"
+ # Start-Process "https://portal.azure.com/#@tenant/resource/subscriptions/$subscriptionId/resourceGroups/$resourceGroupName/overview"
 } catch {
   try {
     Write-Host
