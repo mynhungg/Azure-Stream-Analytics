@@ -50,6 +50,7 @@ $resourceGroupName = "$job-rg-$uniqPostfix"
 $storageAccountName = "clickstreamsa$uniqPostfix"
 $azureFunctionName = "clickstreamfunc$uniqPostfix"
 $eventHubName = "clickstreameh$uniqPostfix"
+$subscriptionId = "960c4480-53c3-4787-8b1b-89bb499b8814"
 
 Set-AzContext -Subscription $subscriptionId -ErrorAction Stop | Out-Null
 Write-Host "Using subscription:" ((Get-AzContext).Subscription.Name) "Id:" (Get-AzContext).Subscription.Id
