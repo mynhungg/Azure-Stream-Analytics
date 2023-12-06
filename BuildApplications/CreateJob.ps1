@@ -65,7 +65,7 @@ try {
   Write-Host -ForegroundColor Green " Done"
 
   Write-Host -NoNewline "(3/5) Creating Storage Account $storageAccountName..."
-  New-AzStorageAccount -ResourceGroupName $resourceGroupName -Name $storageAccountName -SkuName Standard_LRS -Location $region -ErrorAction Stop | Out-Null
+  New-AzStorageAccount -ResourceGroupName $resourceGroupName -Name $storageAccountName -SkuName Standard_GRS -Location $region -ErrorAction Stop | Out-Null
   Write-Host -ForegroundColor Green " Done"
 
   Write-Host -NoNewline "(4/5) Creating Azure Function $azureFunctionName..."
