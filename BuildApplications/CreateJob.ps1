@@ -61,7 +61,7 @@ try {
 
   Write-Host -NoNewline "(2/5) Creating Event Hub $eventHubName..."
   New-AzEventHubNamespace -ResourceGroupName $resourceGroupName -Location $region -Name $eventHubName -SkuName Basic -WarningAction Ignore -ErrorAction Stop | Out-Null
-  New-AzEventHub -ResourceGroupName $resourceGroupName -NamespaceName $eventHubName -Name click-stream-events -PartitionCount 1 --RetentionTimeInHour 168 -WarningAction Ignore -ErrorAction Stop | Out-Null
+  New-AzEventHub -ResourceGroupName $resourceGroupName -NamespaceName $eventHubName -Name click-stream-events -PartitionCount 1 -RetentionTimeInHour 168 -WarningAction Ignore -ErrorAction Stop | Out-Null
   Write-Host -ForegroundColor Green " Done"
 
   Write-Host -NoNewline "(3/5) Creating Storage Account $storageAccountName..."
